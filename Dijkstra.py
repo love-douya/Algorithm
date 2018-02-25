@@ -26,8 +26,7 @@ def Dijkstra(startnode, endnode, graphdict = None):
             else:
                 start2centerdist = dist[center]
                 if start2centerdist + d < dist[node]:
-                    dist[node] = start2centerdist + d
-            
+                    dist[node] = start2centerdist + d            
             if d < minval[1]:
                 minval = (node, d)
 

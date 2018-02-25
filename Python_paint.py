@@ -2,7 +2,6 @@ import random
 import turtle
 from time import sleep
 
-
 def main():
     tlist = []
     head = 0
@@ -26,11 +25,11 @@ def main():
     w.write("Hello World", True, "center", "30px")
     w.goto(-130, -35)
     w.write("Computer Science", True, "center", "30px")
+    w.isvisible()
 
 def moveturtles(turtlelist, dist, angle):
     for turtle in turtlelist: #Make every turtle on the list do the same aactions
         turtle.forward(dist)
         turtle.right(angle)
 
-main()
-sleep(1000)    
+main()  
