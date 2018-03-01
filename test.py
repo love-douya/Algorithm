@@ -31,3 +31,6 @@ str.encode(s)
  
 # bytes to str 
 bytes.decode(b)
+
+a = 5.0000
+print("%.3f" %a)
