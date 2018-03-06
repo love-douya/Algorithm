@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Dijkstra - Debug ]----------"
-	@cd "Dijkstra" && "$(MAKE)" -f  "Dijkstra.mk"
+	@echo "----------Building project:[ Dijkstra_Priority_Queue_Of_STL - Debug ]----------"
+	@cd "Dijkstra_Priority_Queue_Of_STL" && "$(MAKE)" -f  "Dijkstra_Priority_Queue_Of_STL.mk"
 clean:
-	@echo "----------Cleaning project:[ Dijkstra - Debug ]----------"
-	@cd "Dijkstra" && "$(MAKE)" -f  "Dijkstra.mk" clean
+	@echo "----------Cleaning project:[ Dijkstra_Priority_Queue_Of_STL - Debug ]----------"
+	@cd "Dijkstra_Priority_Queue_Of_STL" && "$(MAKE)" -f  "Dijkstra_Priority_Queue_Of_STL.mk" clean

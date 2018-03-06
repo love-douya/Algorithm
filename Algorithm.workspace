@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Algorithm" Database="" Version="10.0.0">
-  <Project Name="Dijkstra_Matrix" Path="Dijkstra/Dijkstra.project" Active="Yes"/>
-  <Project Name="Dijkstra_List" Path="Dijkstra_List/Dijkstra_List.project"/>
+  <Project Name="Dijkstra_Matrix" Path="Dijkstra/Dijkstra.project" Active="No"/>
+  <Project Name="Dijkstra_List" Path="Dijkstra_List/Dijkstra_List.project" Active="Yes"/>
+  <Project Name="Dijkstra_Priority_Queue_Of_STL" Path="Dijkstra_Priority_Queue_Of_STL/Dijkstra_Priority_Queue_Of_STL.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="Dijkstra_Matrix" ConfigName="Debug"/>
       <Project Name="Dijkstra_List" ConfigName="Debug"/>
+      <Project Name="Dijkstra_Priority_Queue_Of_STL" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="Dijkstra_Matrix" ConfigName="Release"/>
       <Project Name="Dijkstra_List" ConfigName="Release"/>
+      <Project Name="Dijkstra_Priority_Queue_Of_STL" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
