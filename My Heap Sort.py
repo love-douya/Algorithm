@@ -9,7 +9,7 @@ def Max_Heapify(A, i):
     if l <= len(A) - 1 and A[l] > A[i]:
         largest = l
     else:
-         largest = i
+        largest = i
     if r <= len(A) - 1 and A[r] > A[largest]:
         largest = r
     if largest != i:
