@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 class Graph:
-    def ___init___(self, vertices):
+    def __init__(self, vertices):
         self.V = vertices 
         #dictionary containing adjacency lsit
         self.graph = defaultdict(list)
@@ -43,7 +43,6 @@ class Graph:
         while stack:
             #Get the next vertex from topological order
             i = stack.pop()
-
             #Update distances of all adjacent vertices
             for node, weight in self.graph[i]:
                 if dist[node] > dist[i] + weight:
@@ -51,7 +50,10 @@ class Graph:
 
         #Print the calculated shortest distance
         for i in range(self.V):
-            print("%d" %dist[i]) 
+            if dist[i] != float("Inf"):
+                print("%d" %dist[i])
+            else:
+                print("Inf") 
 
 g = Graph(6)
 g.addEdge(0, 1, 5)
