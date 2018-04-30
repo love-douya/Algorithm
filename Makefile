@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Longest_Palindromic_Substring - Debug ]----------"
-	@cd "Longest_Palindromic_Substring" && "$(MAKE)" -f  "Longest_Palindromic_Substring.mk"
+	@echo "----------Building project:[ struct_and_class - Debug ]----------"
+	@cd "struct_and_class" && "$(MAKE)" -f  "struct_and_class.mk"
 clean:
-	@echo "----------Cleaning project:[ Longest_Palindromic_Substring - Debug ]----------"
-	@cd "Longest_Palindromic_Substring" && "$(MAKE)" -f  "Longest_Palindromic_Substring.mk" clean
+	@echo "----------Cleaning project:[ struct_and_class - Debug ]----------"
+	@cd "struct_and_class" && "$(MAKE)" -f  "struct_and_class.mk" clean

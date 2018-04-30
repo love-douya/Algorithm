@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=Longest_Palindromic_Substring
+ProjectName            :=struct_and_class
 ConfigurationName      :=Debug
 WorkspacePath          :=C:/Users/TAO/Desktop/Algorithm
-ProjectPath            :=C:/Users/TAO/Desktop/Algorithm/Longest_Palindromic_Substring
+ProjectPath            :=C:/Users/TAO/Desktop/Algorithm/struct_and_class
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="Longest_Palindromic_Substring.txt"
+ObjectsFileList        :="struct_and_class.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
@@ -62,7 +62,7 @@ AS       := C:/mingw/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\CodeLite
-Objects0=$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/struct_and_class.cpp$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(ObjectSuffix): Longest_Palindromic_Substring.cpp $(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/TAO/Desktop/Algorithm/Longest_Palindromic_Substring/Longest_Palindromic_Substring.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(DependSuffix): Longest_Palindromic_Substring.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(DependSuffix) -MM Longest_Palindromic_Substring.cpp
+$(IntermediateDirectory)/struct_and_class.cpp$(ObjectSuffix): struct_and_class.cpp $(IntermediateDirectory)/struct_and_class.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/TAO/Desktop/Algorithm/struct_and_class/struct_and_class.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/struct_and_class.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/struct_and_class.cpp$(DependSuffix): struct_and_class.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/struct_and_class.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/struct_and_class.cpp$(DependSuffix) -MM struct_and_class.cpp
 
-$(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(PreprocessSuffix): Longest_Palindromic_Substring.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Longest_Palindromic_Substring.cpp$(PreprocessSuffix) Longest_Palindromic_Substring.cpp
+$(IntermediateDirectory)/struct_and_class.cpp$(PreprocessSuffix): struct_and_class.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/struct_and_class.cpp$(PreprocessSuffix) struct_and_class.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

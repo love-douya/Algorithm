@@ -3,7 +3,10 @@
   <Project Name="Dijkstra_Matrix" Path="Dijkstra/Dijkstra.project" Active="No"/>
   <Project Name="Dijkstra_List" Path="Dijkstra_List/Dijkstra_List.project" Active="No"/>
   <Project Name="Dijkstra_Priority_Queue_Of_STL" Path="Dijkstra_Priority_Queue_Of_STL/Dijkstra_Priority_Queue_Of_STL.project" Active="No"/>
-  <Project Name="Longest_Palindromic_Substring" Path="Longest_Palindromic_Substring/Longest_Palindromic_Substring.project" Active="Yes"/>
+  <Project Name="Longest_Palindromic_Substring" Path="Longest_Palindromic_Substring/Longest_Palindromic_Substring.project" Active="No"/>
+  <VirtualDirectory Name="C++ Character Test">
+    <Project Name="struct_and_class" Path="struct_and_class/struct_and_class.project" Active="Yes"/>
+  </VirtualDirectory>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -11,6 +14,7 @@
       <Project Name="Dijkstra_Matrix" ConfigName="Debug"/>
       <Project Name="Dijkstra_Priority_Queue_Of_STL" ConfigName="Debug"/>
       <Project Name="Longest_Palindromic_Substring" ConfigName="Debug"/>
+      <Project Name="struct_and_class" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -18,6 +22,7 @@
       <Project Name="Dijkstra_List" ConfigName="Release"/>
       <Project Name="Dijkstra_Priority_Queue_Of_STL" ConfigName="Release"/>
       <Project Name="Longest_Palindromic_Substring" ConfigName="Release"/>
+      <Project Name="struct_and_class" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
