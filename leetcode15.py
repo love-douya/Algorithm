@@ -1,4 +1,5 @@
 import sys
+import string
 
 class Solution1:
     def threeSum(self, nums):
@@ -26,6 +27,6 @@ class Solution1:
  
 if __name__ == "__main__":
     nums = []
-    while sys.stdin.read() != '\n':
-        nums.append(int(sys.stdin.read()))
+    print("Input nums: ")
+    nums = list(map(int, sys.stdin.readlines().strip().split()))
     print(Solution1().threeSum(nums))
