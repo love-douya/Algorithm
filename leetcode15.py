@@ -28,5 +28,5 @@ class Solution1:
 if __name__ == "__main__":
     nums = []
     print("Input nums: ")
-    nums = list(map(int, sys.stdin.readlines().strip().split()))
+    nums = list(map(int, sys.stdin.readlines()))
     print(Solution1().threeSum(nums))
