@@ -13,7 +13,7 @@ class Solution1:
                 d[n] += 1
         s = list(set(nums))
         s.sort()
-        res = set()
+        res = set()-1
         for i, a in enumerate(s):
             d[a] -= 1
             for b in s[i:]:
