@@ -1,3 +1,9 @@
+# zigzag pattern on a given number
+# P     I    N
+# A   L S  I G
+# Y A   H R
+# P     I
+
 class Solution:
     def convert(self, s, numRows):
         """
@@ -15,6 +21,12 @@ class Solution:
             row += direction
         return "".join(res)
 
+# zigzag pattern on a given number
+# P     I    N
+# A   L S  I G
+# Y A   H R
+# P     I
+
 class MySolution:
     def convert(self, s, numRows):
         if numRows == 1 or numRows >= len(s):
@@ -22,13 +34,21 @@ class MySolution:
         group_len = 2 * numRows - 2
         result = []
         index = 0
-        for i in range(0, group_len):
+        for i in range(0, group_len // 2 + 1):
             index = i
+            start_index = 0
             while index < len(s):
-                result.append(s[index])
+                if index % (group_len // 2) == 0:
+                    result.append(s[index])
+                else:
+                    #result.extend([s[index], s[start_index + group_len - 1 - index]])
+                    result.append(s[index])
+                    if 2 * start_index - index + group_len < len(s):
+                        result.append(s[2 * start_index - index + group_len])
                 index += group_len
+                start_index += group_len
+                #print(start_index)
         return "".join(result)
-
 
 if __name__ == "__main__":
     #Solution().convert("PAYPALISHIRING", 4) == True
