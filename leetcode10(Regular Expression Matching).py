@@ -1,3 +1,20 @@
+#Recursion Version
+class Solution_C:
+    def isMatch(self, s, p):
+        if p == None:
+            return s == None
+        if len(p) == 1:
+            return (len(s) == 1) and (s[0] == p[0] or p[0] == '.')
+        if p[1] != '*':
+            if s == None:
+                return False
+            return (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p[1:])
+        while s != None and (s[0] ==p[0] or p[0] == '.'):
+            if self.isMatch(s, p[2:]):
+                return True
+            s = s[1:]
+        return self.isMatch(s, p[1:]) 
+
 class Char:
     def __init__(self, char, repeat=False):
         self.char = char
@@ -67,4 +84,5 @@ class Solution:
         return char.match(string[0]) and self.test_patterns(chars[1:], repeats, string[1:])
 
 if __name__ == "__main__":
-    print(Solution().isMatch("abcaad", "abca*d"))
+    print(Solution().isMatch("abcaaad", "abca*d"))
+    #print(Solution_C().isMatch("abcaad", "abca*"))
