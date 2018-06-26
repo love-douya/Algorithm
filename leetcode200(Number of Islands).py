@@ -1,26 +1,5 @@
 import sys
 
-# def ask_username():
-#     stdout.write("Username: ".encode('utf-8'))
-#     raw_username = raw_input()
-#     try:
-#         get_user(config.temboard['users'], raw_username)
-#     except HTTPError:
-#         pass
-#     except ConfigurationError:
-#         pass
-#     else:
-#         stdout.write("User already exists.\n")
-#         return ask_username(config)
-#     try:
-#         username = raw_username
-#         validate_parameters({'username': username},
-#                             [('username', T_USERNAME, False)])
-#     except HTTPError:
-#         stdout.write("Invalid username.\n")
-#         return ask_username(config)
-#     return username 
-
 class Solution:
     def __init__(self, Graph):
         self.Graph = Graph
@@ -73,3 +52,24 @@ if __name__ == "__main__":
         for j in range(0, Column_Number):
             Graph[i][j] = int(sys.stdin.readline())
     sys.stdout.write("Result is: \n" + str(Solution(Graph).numIslands()))
+
+    # def ask_username():
+#     stdout.write("Username: ".encode('utf-8'))
+#     raw_username = raw_input()
+#     try:
+#         get_user(config.temboard['users'], raw_username)
+#     except HTTPError:
+#         pass
+#     except ConfigurationError:
+#         pass
+#     else:
+#         stdout.write("User already exists.\n")
+#         return ask_username(config)
+#     try:
+#         username = raw_username
+#         validate_parameters({'username': username},
+#                             [('username', T_USERNAME, False)])
+#     except HTTPError:
+#         stdout.write("Invalid username.\n")
+#         return ask_username(config)
+#     return username 

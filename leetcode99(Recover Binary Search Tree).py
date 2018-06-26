@@ -1,5 +1,27 @@
 import sys
 
+# class Solution(object):
+#     def recoverTree(self, root):
+#         """
+#         :type root: TreeNode
+#         :rtype: void Do not return anything, modify root in-place instead.
+#         """
+#         self.pre_node,self.n1,self.n2 = None,None,None
+#         self.solve(root)
+#         self.n1.val,self.n2.val=self.n2.val,self.n1.val
+        
+#     def solve(self,root):
+#         if not root:return
+#         self.solve(root.left)
+#         if not self.pre_node:self.pre_node = root
+#         if root.val<self.pre_node.val:
+#             if not self.n1:
+#                 self.n1 = self.pre_node
+#                 self.n2 = root
+#             else:self.n2 = root
+#         self.pre_node = root
+#         self.solve(root.right)
+
 #Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
