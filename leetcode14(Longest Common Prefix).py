@@ -1,34 +1,50 @@
 import sys
+#from collections import OrderedDict
 
 class Solution:
+    def pop(self, Common_Prefix, pop_number):
+        Number = 0
+        while Number != pop_number:
+            Common_Prefix.pop()
+            Number += 1
+
     def longestCommonPrefix(self, strs):
         """
         :type strs: List[str]
         :rtype: str
         """
         Common_Prefix = []
-        length_of_tuple = 0
-        for i in range(0, len(strs[0])):
-            for j in range(0, len(strs)):
-                Common_Prefix.append(strs[j][i])
-                if len(tuple(Common_Prefix)) == (length_of_tuple + 1):
-                    length_of_tuple = len(tuple(Common_Prefix))
+        length_of_Set = 0
+        String_Num = len(strs)
+        try:
+            String_Len = min([len(strs[i]) for i in range(String_Num)])
+        except Exception as e:
+            return ""
+        else:
+            for i in range(0, String_Len):
+                for j in range(0, String_Num):
+                    Common_Prefix.append(strs[j][i])
+                if len(set(Common_Prefix)) == (length_of_Set + 1) or len(set(Common_Prefix)) == length_of_Set:
+                    length_of_Set = len(set(Common_Prefix))
+                    self.pop(Common_Prefix, String_Num - 1)
                 else:
+                    self.pop(Common_Prefix, String_Num)
                     break
-        return tuple(Common_Prefix)
+            #return "".join(list(OrderedDict.fromkeys(Common_Prefix)))
+            return "".join(Common_Prefix)
     
 if __name__ == "__main__":
-    sys.stdout.write("Input String Number: \n")
-    String_Num = sys.stdin.read()
+    #sys.stdout.write("Input String Number: \n")
+    #String_Num = sys.stdin.read()
     sys.stdout.write("Input Strings List: \n")
     #array = [[0 for i in range(100)] for j in range(100)]
-    array = [[String_Num]]
-    count = 0
-    sys.stdin.flush()
+    array = []
+    #count = 0
+    #sys.stdin.flush()
     string = sys.stdin
     for lines in string:
-        array[count].append(lines)
+        array.append(list(lines.strip()))
         #string = sys.stdin.readline()
-        sys.stdout.writelines(str(array[count]) + "\n")
-        count += 1
+        #sys.stdout.writelines(str(array[count]))
+        #count += 1
     sys.stdout.writelines("Longest Prefix is: \n" + str(Solution().longestCommonPrefix(array)))
