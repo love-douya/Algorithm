@@ -14,7 +14,7 @@ class Solution:
         :rtype: str
         """
         Common_Prefix = []
-        length_of_Set = 0
+        #length_of_Set = 0
         String_Num = len(strs)
         try:
             String_Len = min([len(strs[i]) for i in range(String_Num)])
@@ -24,11 +24,14 @@ class Solution:
             for i in range(0, String_Len):
                 for j in range(0, String_Num):
                     Common_Prefix.append(strs[j][i])
-                if len(set(Common_Prefix)) == (length_of_Set + 1) or len(set(Common_Prefix)) == length_of_Set:
-                    length_of_Set = len(set(Common_Prefix))
+                    print(Common_Prefix[-1:-(String_Len + 1):-1])
+                if len(set(Common_Prefix[-1:-(String_Len + 1):-1])) == 1:
+                    #length_of_Set = len(set(Common_Prefix))
                     self.pop(Common_Prefix, String_Num - 1)
+                    print(Common_Prefix)
                 else:
                     self.pop(Common_Prefix, String_Num)
+                    print(Common_Prefix)
                     break
             #return "".join(list(OrderedDict.fromkeys(Common_Prefix)))
             return "".join(Common_Prefix)
