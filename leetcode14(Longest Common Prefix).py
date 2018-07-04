@@ -1,12 +1,15 @@
 import sys
+import copy
+#from collections import deque
 #from collections import OrderedDict
 
 class Solution:
-    def pop(self, Common_Prefix, pop_number):
+    def pop_char(self, Common_Prefix, pop_number):
         Number = 0
         while Number != pop_number:
             Common_Prefix.pop()
             Number += 1
+        #return Common_Prefix
 
     def longestCommonPrefix(self, strs):
         """
@@ -18,19 +21,20 @@ class Solution:
         String_Num = len(strs)
         try:
             String_Len = min([len(strs[i]) for i in range(String_Num)])
-        except Exception as e:
+        except Exception:
             return ""
         else:
             for i in range(0, String_Len):
                 for j in range(0, String_Num):
                     Common_Prefix.append(strs[j][i])
-                    print(Common_Prefix[-1:-(String_Len + 1):-1])
-                if len(set(Common_Prefix[-1:-(String_Len + 1):-1])) == 1:
+                #Common_Prefix_temp = copy.deepcopy(Common_Prefix)
+                if len(set(Common_Prefix[-(String_Num):])) == 1:
+                    print(Common_Prefix[-(String_Num):])
                     #length_of_Set = len(set(Common_Prefix))
-                    self.pop(Common_Prefix, String_Num - 1)
+                    self.pop_char(Common_Prefix, String_Num - 1)
                     print(Common_Prefix)
                 else:
-                    self.pop(Common_Prefix, String_Num)
+                    self.pop_char(Common_Prefix, String_Num)
                     print(Common_Prefix)
                     break
             #return "".join(list(OrderedDict.fromkeys(Common_Prefix)))

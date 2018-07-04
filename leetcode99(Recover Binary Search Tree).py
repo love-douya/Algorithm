@@ -1,26 +1,28 @@
 import sys
 
-# class Solution(object):
-#     def recoverTree(self, root):
-#         """
-#         :type root: TreeNode
-#         :rtype: void Do not return anything, modify root in-place instead.
-#         """
-#         self.pre_node,self.n1,self.n2 = None,None,None
-#         self.solve(root)
-#         self.n1.val,self.n2.val=self.n2.val,self.n1.val
+class Solution(object):
+    def recoverTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: void Do not return anything, modify root in-place instead.
+        """
+        self.pre_node, self.n1, self.n2 = None, None, None
+        self.solve(root)
+        self.n1.val, self.n2.val = self.n2.val, self.n1.val
         
-#     def solve(self,root):
-#         if not root:return
-#         self.solve(root.left)
-#         if not self.pre_node:self.pre_node = root
-#         if root.val<self.pre_node.val:
-#             if not self.n1:
-#                 self.n1 = self.pre_node
-#                 self.n2 = root
-#             else:self.n2 = root
-#         self.pre_node = root
-#         self.solve(root.right)
+    def solve(self, root):
+        if not root:
+            return self.solve(root.left)
+        if not self.pre_node:
+            self.pre_node = root
+        if root.val < self.pre_node.val:
+            if not self.n1:
+                self.n1 = self.pre_node
+                self.n2 = root
+            else:
+                self.n2 = root
+        self.pre_node = root
+        self.solve(root.right)
 
 #Definition for a binary tree node.
 class TreeNode:
@@ -29,7 +31,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
-class Solution:
+class Solution1:
     def recoverTree(self, root):
         """
         :type root: TreeNode
@@ -41,8 +43,8 @@ class Solution:
 if __name__ == "__main__":
     Node1 = TreeNode(1)
     Node2 = TreeNode(3)
-    Node3 = TreeNode(None)
-    Node4 = TreeNode(None)
+    Node3 = TreeNode(0)
+    Node4 = TreeNode(0)
     Node5 = TreeNode(2)
     Node1.left = Node2
     Node1.right = Node3

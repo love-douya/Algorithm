@@ -18,9 +18,7 @@ class Solution:
 
 if __name__ == "__main__":
     sys.stdout.write("Input list1: \n")
-    l1 = list(map(int, [str(sys.stdin.readlines()).strip('->').strip('\n')]))
-    print(l1)
+    l1 = list(map(int, list(str(sys.stdin.readlines()).strip())))
     sys.stdout.write("Input list2: \n")    
-    l2 = sys.stdin.readlines().strip("->")
-    
+    l2 = list(map(int, list(str(sys.stdin.readlines()).strip())))
     sys.stdout.write("Result is: \n" + str(Solution().mergeTwoLists(l1, l2)))
