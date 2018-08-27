@@ -35,7 +35,6 @@ class Solution:
 
         return result
 
-
 def Value2Instance(ValueList):
     Node = ListNode(ValueList[0])
     Root = Node
