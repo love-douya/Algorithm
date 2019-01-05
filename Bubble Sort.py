@@ -6,4 +6,5 @@ def bubbleSort(arr):
     return arr
 
 print(bubbleSort([12, 2, 8, 1, 23]))
-    
+
+

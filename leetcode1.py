@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 #Time limit exceed
 class Solution1:
     def twoSum(self, nums, target):

@@ -11,7 +11,7 @@ class Heap():
         self.array = []
         self.size = 0
         self.pos = []
- 
+
     def newMinHeapNode(self, v, dist):
         minHeapNode = [v, dist]
         return minHeapNode
