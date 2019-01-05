@@ -6,6 +6,8 @@
 
 import sys
 
+print("test")
+
 class Solution:
     def removeNthFromEnd(self, head, n):
         """
@@ -15,8 +17,17 @@ class Solution:
         """
         pass
 
-    def Create_link node(self, node_number, node_head):
-            
-
+class Single_Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        
 if __name__ == "__main__":
+    sys.stdout.write("Input the link number sequence: \n")
+    sequence = list(map(int, str(sys.stdin.readline(input())).strip().split()))
+    length = len(sequence)
+    print("%s, %d" %sequence %length)
+    
+    
+
     
