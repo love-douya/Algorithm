@@ -14,7 +14,13 @@ class Solution:
         :type n: int
         :rtype: ListNode
         """
-        pass
+        node = head
+        count = 1
+        while count < n - 1:
+            node = node.next
+            count += 1
+        node.next = node.next.next
+        return head
 
     def Create_Node_List(self, sequence, length):
         start = ListNode(sequence[0])
@@ -37,7 +43,7 @@ if __name__ == "__main__":
     sys.stdout.write("Input the number of the node to be deleted: \n")
     reverse_node_number = int(sys.stdin.readline())
     solution = Solution()
-    solution.Print_Node(solution.Create_Node_List(sequence, length))
+    solution.Print_Node(solution.removeNthFromEnd(solution.Create_Node_List(sequence, length), length))
     
     
     
