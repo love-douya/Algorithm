@@ -59,5 +59,19 @@
 # lp = li[0:3]
 # print(lp)
 
-a = [1,2,3,4]
-print(a[-1:-3:-1])
+# a = [1,2,3,4]
+# print(a[-1:-3:-1])
+
+#生成器与协程研究
+def my_generator(g):
+    for i in range(g):
+        temp = yield i
+        print(f'我是{temp}')
+
+p = my_generator(5)
+
+print(next(p))
+print(next(p))
+p.send(100)
+print(next(p))
+print(next(p))
